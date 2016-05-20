@@ -32,10 +32,10 @@ int main(void)
     
     return(0);
     
-    /*status=scanf(" %d", &min);
+    /*status=scanf(" %d", &minutes);
     if (status==1)
     {
-        bottles=(min*1.5*128)/16;
+        bottles=(minutes*1.5*128)/16;
         printf("bottles= %d\n",bottles);
     }
     else
