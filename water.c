@@ -27,7 +27,7 @@ int main(void)
         minutes=GetInt();
     }while(minutes<=0);
     
-    bottles=(min*1.5*128)/16;
+    bottles=(minutes*1.5*128)/16;
     printf("bottles= %d\n",bottles);
     
     return(0);
