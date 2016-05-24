@@ -30,7 +30,7 @@ int main(void)
     printf("Number=");
     card_num=GetLongLong();
 
-    while(card_num >10 )
+    while(card_num >=10 )
     {
         digit=card_num % 10;
         card_num=card_num / 10;
