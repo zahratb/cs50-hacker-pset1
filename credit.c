@@ -23,7 +23,7 @@ int main(void)
     int num_digits=0;       
     int digit=0;
     int digit_even_Loc;   // digit in the even location
-    int sum=0;
+    int total=0;
     string  output_msg="";
     int first_two_digits=0;
 
@@ -38,36 +38,36 @@ int main(void)
        
         if ((num_digits % 2) ==0)
         {   
-            digit_even_Loc=digit;
-            digit_even_Loc=(digit_even_Loc*2);
-            sum= (digit_even_Loc % 10) + (digit_even_Loc / 10) + sum;
+            digit_even_Loc = digit;
+            digit_even_Loc = (digit_even_Loc*2);
+            total = (digit_even_Loc % 10) + (digit_even_Loc / 10) + total;
         } 
         else
         {
-            sum=sum+digit;
+            total = total + digit;
         }
     }
     
-    first_two_digits =(card_num*10 + digit);
+    first_two_digits = (card_num * 10 + digit);
     digit= (int) card_num;
     num_digits++;
     
-    if ((num_digits % 2) ==0)   // check if the last digit of the card number has even location 
+    if ((num_digits % 2) == 0)   // check if the last digit of the card number has even location 
     {   
-        digit_even_Loc=digit;
-        digit_even_Loc=(digit_even_Loc * 2);
-        sum= (digit_even_Loc % 10) + (digit_even_Loc / 10) + sum;
+        digit_even_Loc = digit;
+        digit_even_Loc = (digit_even_Loc * 2);
+        total = (digit_even_Loc % 10) + (digit_even_Loc / 10) + total;
     } 
     else
     {
-        sum=sum+digit;
+        total = total + digit;
     }
     
         
     // check if number of digits is greater than 13 and sum modulo 10 is zero and create the output message.
-    if (sum % 10 == 0 && num_digits >= 13)
+    if (total % 10 == 0 && num_digits >= 13)
     {
-        if (card_num==4)
+        if (card_num == 4)
             {   output_msg="VISA\n";   }
 
         else if (first_two_digits == 34 ||  first_two_digits == 37)
